@@ -132,9 +132,15 @@ mr-auto es el margin-right auto, llenar el margen de la derecha lo más que se p
                         <div class="form-group row">
                             <label for="number-of-guests" class="col-md-2 col-form-label col-form-label">Section</label>
                             <div class="col-md-10 btn-toolbar">
-                              <div class="btn-group">
-                                  <button class="btn btn-success" type="button">Non-Smoking</button>
-                                  <button class="btn btn-danger" type="button">Smoking</button>
+                              <div class="btn-group " data-toggle="buttons">
+                                <label for="nonSmoking" class="btn btn-success">
+                                  <input type="radio" class="d-none" name="smokingPreferenceRadio" id="nonSmoking" checked>
+                                  Non-Smoking
+                                </label>
+                                <label for="smoking" class="btn btn-danger">
+                                  <input type="radio" class="d-none" name="smokingPreferenceRadio" id="smoking">
+                                  Smoking
+                                </label>
                               </div>
                             </div>
                         </div>
