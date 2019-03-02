@@ -88,9 +88,83 @@ mr-auto es el margin-right auto, llenar el margen de la derecha lo más que se p
                 <div class="col-12 col-sm-3 align-self-center text-center">
                     <img src="img/logo.png" class="img-fluid">
                 </div>
+
+                <div id="formReserve" class="modal fade text-dark" role="dialog">
+                  <div class="modal-dialog modal-lg" role="dialog">
+                    <div class="modal-content">
+
+                    <div class="modal-header">
+                      <h4 class="modal-title">Reserve Table</h4>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="reserveForm" action="submit">
+                        <div class="form-group row">
+                            <label for="number-of-guests" class="col-md-2 col-form-label col-form-label">Number of Guests</label>
+                            <div class="col-md-10">
+                              <div class="form-check form-check-inline">
+                                <input type="radio" name="number-of-guests" id="number-of-guest-1" class="form-check-input">
+                                <label for="number-of-guest-1" class="form-check-label">1</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input type="radio" name="number-of-guests" id="number-of-guest-2" class="form-check-input">
+                                <label for="number-of-guest-2" class="form-check-label">2</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input type="radio" name="number-of-guests" id="number-of-guest-3" class="form-check-input">
+                                <label for="number-of-guest-3" class="form-check-label">3</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input type="radio" name="number-of-guests" id="number-of-guest-4" class="form-check-input">
+                                <label for="number-of-guest-4" class="form-check-label">4</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input type="radio" name="number-of-guests" id="number-of-guest-5" class="form-check-input">
+                                <label for="number-of-guest-5" class="form-check-label">5</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input type="radio" name="number-of-guests" id="number-of-guest-6" class="form-check-input">
+                                <label for="number-of-guest-6" class="form-check-label">6</label>
+                              </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="number-of-guests" class="col-md-2 col-form-label col-form-label">Section</label>
+                            <div class="col-md-10 btn-toolbar">
+                              <div class="btn-group">
+                                  <button class="btn btn-success" type="button">Non-Smoking</button>
+                                  <button class="btn btn-danger" type="button">Smoking</button>
+                              </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                          <label for="date" class="col-md-2 col-form-label">Date and Time</label>
+                          <div class="col-12 col-md-4">
+                            <input type="text" class="form-control" id="date" name="date" placeholder="Date">
+                          </div>
+                          <div class="col-12 col-md-4">
+                            <input type="text" class="form-control" id="time" name="time" placeholder="Time">
+                          </div>
+                        </div>
+
+                        <div class="form-group row">
+                          <div class="col-md-10 offset-md-2">
+                            <button type="submit" class="btn btn-secondary" data-dismiss="#reserveForm">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Reserve</button>
+                          </div>
+                        </div>
+
+                      </form>
+                    </div>
+
+                    </div>
+                  </div>
+                </div>
+
                 <div class="col-12 col-sm-3 align-self-center text-center">
-                    <a href="#reserveForm" class="btn btn-block btn-warning btn-lg mt-5 mt-sm-0" data-toggle="tooltip" data-html="true"  title="Or Call us at  <br><strong>+852 12345678</strong>"
-                        data-placement="bottom" >Reserve Table</a>
+                    <a href="#reserveForm" class="btn btn-block btn-warning btn-lg mt-5 mt-sm-0" data-toggle="modal" data-target="#formReserve">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -210,7 +284,7 @@ mr-auto es el margin-right auto, llenar el margen de la derecha lo más que se p
             </div>
         </div>
 
-        <div class="row row-content">
+        <!-- <div class="row row-content">
           <div class="col-12 col-md-8 offset-md-2">
             <div class="card">
               <div class="card-header bg-warning text-white">
@@ -268,7 +342,7 @@ mr-auto es el margin-right auto, llenar el margen de la derecha lo más que se p
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
     </div>
 
@@ -320,9 +394,6 @@ mr-auto es el margin-right auto, llenar el margen de la derecha lo más que se p
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script>
-    $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip();
-    });
 </script>
 </body>
 
